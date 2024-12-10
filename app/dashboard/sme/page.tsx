@@ -1,19 +1,28 @@
-'use client'
+"use client";
 
-import { Layout } from '@/components/layout'
-import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { Layout } from "@/components/layout";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import { Input } from "@/components/ui/input";
 
 const data = [
-  { name: 'Jan', value: 400 },
-  { name: 'Feb', value: 300 },
-  { name: 'Mar', value: 200 },
-  { name: 'Apr', value: 278 },
-  { name: 'May', value: 189 },
-]
+  { name: "Jan", value: 400 },
+  { name: "Feb", value: 300 },
+  { name: "Mar", value: 200 },
+  { name: "Apr", value: 278 },
+  { name: "May", value: 189 },
+];
 
 export default function SMEDashboardPage() {
   return (
@@ -110,13 +119,17 @@ export default function SMEDashboardPage() {
                     <strong>TechVentures</strong>
                     <p>Interest Level: High</p>
                     <p>Potential Investment: $200,000</p>
-                    <Button variant="outline" size="sm">Contact</Button>
+                    <Button variant="outline" size="sm">
+                      Contact
+                    </Button>
                   </li>
                   <li>
                     <strong>GreenFund</strong>
                     <p>Interest Level: Medium</p>
                     <p>Potential Investment: $100,000</p>
-                    <Button variant="outline" size="sm">Contact</Button>
+                    <Button variant="outline" size="sm">
+                      Contact
+                    </Button>
                   </li>
                 </ul>
               </CardContent>
@@ -125,5 +138,5 @@ export default function SMEDashboardPage() {
         </TabsContent>
       </Tabs>
     </Layout>
-  )
+  );
 }

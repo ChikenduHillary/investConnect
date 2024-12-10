@@ -1,20 +1,21 @@
-'use client'
+"use client";
 
-import { Layout } from '@/components/layout'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts'
+import { Layout } from "@/components/layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from "recharts";
+import { Progress } from "@/components/ui/progress";
 
 const data = [
-  { name: 'Tech', value: 400 },
-  { name: 'Healthcare', value: 300 },
-  { name: 'Finance', value: 200 },
-  { name: 'Renewable Energy', value: 100 },
-]
+  { name: "Tech", value: 400 },
+  { name: "Healthcare", value: 300 },
+  { name: "Finance", value: 200 },
+  { name: "Renewable Energy", value: 100 },
+];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 export default function InvestorDashboardPage() {
   return (
@@ -77,7 +78,11 @@ export default function InvestorDashboardPage() {
           <div className="space-y-8">
             <Input placeholder="Search opportunities..." className="max-w-sm" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {['HealthTech Innovator', 'AI Solutions Provider', 'Sustainable Fashion Brand'].map((company) => (
+              {[
+                "HealthTech Innovator",
+                "AI Solutions Provider",
+                "Sustainable Fashion Brand",
+              ].map((company) => (
                 <Card key={company}>
                   <CardHeader>
                     <CardTitle>{company}</CardTitle>
@@ -111,7 +116,10 @@ export default function InvestorDashboardPage() {
                     dataKey="value"
                   >
                     {data.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
                     ))}
                   </Pie>
                   <Legend />
@@ -133,12 +141,14 @@ export default function InvestorDashboardPage() {
             <CardContent>
               <p>Average ROI: 35%</p>
               <p>Best Performing Sector: Tech (50% ROI)</p>
-              <p>Highest Growth Investment: AI Solutions Provider (100% growth)</p>
+              <p>
+                Highest Growth Investment: AI Solutions Provider (100% growth)
+              </p>
               <Button className="mt-4">Generate Detailed Report</Button>
             </CardContent>
           </Card>
         </TabsContent>
       </Tabs>
     </Layout>
-  )
+  );
 }

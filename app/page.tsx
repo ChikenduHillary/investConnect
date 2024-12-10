@@ -59,7 +59,7 @@ export default function LandingPage() {
         </div>
         <div className="mt-16">
           <h2 className="text-2xl font-semibold mb-4">
-            Why Choose InvestConnect
+            Why Choose BitVest
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>

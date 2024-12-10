@@ -32,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header className="border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold">
-            InvestConnect
+            BizVest
           </Link>
           <nav>
             <Sheet>
@@ -55,7 +55,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow container mx-auto px-4 py-8">{children}</main>
       <footer className="border-t">
         <div className="container mx-auto px-4 py-4 text-center text-sm text-gray-600">
-          © 2024 InvestConnect. All rights reserved.
+          © 2024 BizVest. All rights reserved.
         </div>
       </footer>
     </div>
